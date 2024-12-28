@@ -53,3 +53,11 @@ th {
     text-align: center;
 }
 
+.dice-info {
+    font-family: 'Courier New', Courier, monospace; /* Example font */
+    font-size: 1em; /* Adjust size as needed */
+    color: #333; /* Adjust color as needed */
+    margin: auto;
+    text-align: center;
+
+}

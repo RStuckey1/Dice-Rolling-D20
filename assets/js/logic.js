@@ -121,7 +121,7 @@ const getCurrentResults = function () {
     const results = JSON.parse(localStorage.getItem("currentResults")) || []
     results.forEach(function (result) {
         const newResultEl = document.createElement('p')
-        newResultEl.textContent = result + '/' 
+        newResultEl.textContent = ' ' + result + '/' 
         document.getElementById('currentResults').appendChild(newResultEl)
 
     });
@@ -169,6 +169,18 @@ document.getElementById('rollTable').addEventListener('click', function (event) 
 })
 
 resetBtn.addEventListener('click', handleClick);
+
+document.getElementById('numberOfDice').addEventListener('click', function (event) {
+    if (event.target.classList.contains('dropdown-item')) {
+        document.getElementById('numberOfDiceInfo').textContent = `Number of Dice: ${event.target.textContent}`;
+    }
+});
+
+document.getElementById('typeOfDice').addEventListener('click', function (event) {
+    if (event.target.classList.contains('dropdown-item')) {
+        document.getElementById('typeOfDiceInfo').textContent = `Type of Dice: ${event.target.textContent}`;
+    }
+});
 
 document.querySelector('#numberOfDice').addEventListener('click', handleNumberSelect)
 
