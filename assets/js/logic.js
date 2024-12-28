@@ -121,7 +121,7 @@ const getCurrentResults = function () {
     const results = JSON.parse(localStorage.getItem("currentResults")) || []
     results.forEach(function (result) {
         const newResultEl = document.createElement('p')
-        newResultEl.textContent = result
+        newResultEl.textContent = result + '/' 
         document.getElementById('currentResults').appendChild(newResultEl)
 
     });

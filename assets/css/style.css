@@ -47,3 +47,9 @@ th {
     height: 100%;
     text-align: center;
 }
+
+.currentResults {
+    margin: auto;
+    text-align: center;
+}
+
