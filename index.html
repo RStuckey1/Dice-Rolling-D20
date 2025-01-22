@@ -77,17 +77,17 @@
     </section>
     <section class="text-center">
         <div class="btn-group">
-        <button class="btn btn-outline-secondary" id="rollButton">
-            Roll!
+            <button class="btn btn-outline-secondary" id="rollButton">
+                Roll!
 
-        </button>
-        <button class="btn btn-outline-secondary" id="resetButton">
-            Reset!
-        </button>
-        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
-        data-bs-target="#exampleModal">
-        Get Dice Stats!
-    </button>
+            </button>
+            <button class="btn btn-outline-secondary" id="resetButton">
+                Reset!
+            </button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Get Dice Stats!
+            </button>
         </div>
         <table>
     </section>
@@ -98,7 +98,7 @@
                 <th scope="col">Type</th>
                 <th scope="col">Number of Dice</th>
                 <th scope="col">Roll(s)</th>
-                <th></th>
+
             </tr>
         </thead>
         <tbody>
@@ -106,45 +106,43 @@
                 <th scope="row">d20</th>
                 <td id="d20-number"></td>
                 <td id="d20-rolls"></td>
-                <td>
-                   
-                </td>
+
             </tr>
             <tr>
                 <th scope="row">d100</th>
                 <td id="d100-number"></td>
                 <td id="d100-rolls"></td>
-                <td></td>
+
             </tr>
             <tr>
                 <th scope="row">d12</th>
                 <td id="d12-number"></td>
                 <td id="d12-rolls"></td>
-                <td></td>
+
             </tr>
             <tr>
                 <th scope="row">d10</th>
                 <td id="d10-number"></td>
                 <td id="d10-rolls"></td>
-                <td></td>
+
             </tr>
             <tr>
                 <th scope="row">d8</th>
                 <td id="d8-number"></td>
                 <td id="d8-rolls"></td>
-                <td></td>
+
             </tr>
             <tr>
                 <th scope="row">d6</th>
                 <td id="d6-number"></td>
                 <td id="d6-rolls"></td>
-                <td></td>
+
             </tr>
             <tr>
                 <th scope="row">d4</th>
                 <td id="d4-number"></td>
                 <td id="d4-rolls"></td>
-                <td></td>
+
             </tr>
         </tbody>
     </table>
@@ -165,9 +163,11 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-warning" id="resetStatsButton">Reset Stats</button>
                 </div>
             </div>
         </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

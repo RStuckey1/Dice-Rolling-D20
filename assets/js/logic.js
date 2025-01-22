@@ -128,6 +128,28 @@ const getCurrentResults = function () {
 
 }
 
+const updateModalContent = function () {
+    const currentStats = JSON.parse(localStorage.getItem('stats')) || stats;
+    const totalRollsElement = document.getElementById('totalRolls');
+    const averageResultsElement = document.getElementById('averageResults');
+
+    let totalRolls = 0;
+    let totalResults = 0;
+
+    for (const type in currentStats) {
+        if (Object.hasOwnProperty.call(currentStats, type)) {
+            const element = currentStats[type];
+            totalRolls += element.timesRolled;
+            totalResults += element.results;
+        }
+    }
+
+    const averageResults = totalRolls ? (totalResults / totalRolls).toFixed(2) : 0;
+
+    totalRollsElement.textContent = `Total Rolls: ${totalRolls}`;
+    averageResultsElement.textContent = `Average Results: ${averageResults}`;
+}
+
 const resetBtn = document.getElementById("resetButton");
 
 function handleClick() {
@@ -181,9 +203,29 @@ document.getElementById('typeOfDice').addEventListener('click', function (event)
         document.getElementById('typeOfDiceInfo').textContent = `Type of Dice: ${event.target.textContent}`;
     }
 });
+document.getElementById('exampleModal').addEventListener('show.bs.modal', updateModalContent);
 
 document.querySelector('#numberOfDice').addEventListener('click', handleNumberSelect)
 
 document.querySelector('#typeOfDice').addEventListener('click', handleTypeSelect)
 
 document.querySelector('#rollButton').addEventListener('click', handleRoll)
+
+const resetStats = function () {
+    // Reset the stats object
+    for (const type in stats) {
+        if (Object.hasOwnProperty.call(stats, type)) {
+            stats[type].timesRolled = 0;
+            stats[type].results = 0;
+        }
+    }
+
+    // Update local storage
+    localStorage.setItem('stats', JSON.stringify(stats));
+
+    // Update the modal content
+    updateModalContent();
+}
+
+// Attach the reset function to the reset button's click event
+document.getElementById('resetStatsButton').addEventListener('click', resetStats);

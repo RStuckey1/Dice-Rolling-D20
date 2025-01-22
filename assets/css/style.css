@@ -1,3 +1,8 @@
+
+
+
+
+
 #selectedNumber,
 #selectedType {
     margin-left: 2rem;
@@ -60,4 +65,16 @@ th {
     margin: auto;
     text-align: center;
 
+}
+
+#rollTable {
+    margin: 5%;
+}
+
+div.modal-header {
+    border:hidden;
+}
+
+div.modal-footer {
+    border:hidden;
 }
