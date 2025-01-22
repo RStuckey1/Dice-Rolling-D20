@@ -1,4 +1,4 @@
-# rngd20
+# Dice Rolling D20
 
 ## Overview
 
@@ -22,7 +22,9 @@ The table functions as a visual representaion of the input values dictated by th
 
 The Get Dice Button functions as an info modal, a way of viewing hidden dice stats such as average roll total and total dice rolled. Mostly for fun!
 
-## Credit
+## Preview
+https://github.com/user-attachments/assets/a72faef8-3e8c-4cd5-8d96-3ba88b7138cd
 
-Made with <3 by Robby, David, and Rick.
+## Credit
+Started as a group project from Robby, David, and Rick. Forked and edited to function by Rick S.
 
