@@ -1,28 +1,70 @@
-
-
-
-
-
-#selectedNumber,
-#selectedType {
-    margin-left: 2rem;
+body {
+    background-color: black;
+    width: 100%;
+    height: auto;
 }
 
-table {
-    border-collapse: collapse;
-    width: 50%;
-    margin: 20px auto;
+.header {
+    position:absolute;
 }
 
-th,
-td {
-    border: 1px solid black;
-    padding: 8px;
+.headerContainer {
+    color:aqua;
+    border-color: aqua;
+    border: 2px solid;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.diceborder {
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid aqua;
+
+}
+
+.diceinfo{
+    color: aqua;
+}
+
+.btn-group {
+    margin-left: 10%;
+    margin-right: 10%;
+    color: aqua;
+    background-color: aqua;
+}
+
+#dicebutton {
+    border: 2px solid white;
+}
+
+
+
+
+.table, tr, td, th{
+    border: 4px solid aqua;
+    margin-left:10%;
+    margin-right:10%;
     text-align: center;
+    color: aqua;
+    background-color: black;
+    
+}
+
+#numberOfDiceInfo {
+    color:aqua;
+    font-size:20px;
+    margin-left: 5%;
+}
+
+#typeOfDiceInfo {
+    color:aqua;
+    font-size:20px;
+    margin-right: 5%;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color:aqua;
 }
 
 .hex {
@@ -36,6 +78,11 @@ th {
     align-items: center;
     justify-content: center;
     margin-left: 8rem;
+}
+
+.getDiceStats {
+    color: black;
+    background-color: aqua;
 }
 
 .content {
@@ -53,22 +100,67 @@ th {
     text-align: center;
 }
 
-.currentResults {
-    margin: auto;
+body > section.diceborder > p.currentResult {
     text-align: center;
+    color: aqua;
+    font-size: 30px;
 }
 
-.dice-info {
+#currentResults {
+    align-content: center;
+    color: aqua;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 25px;
+}
+.diceinfo {
     font-family: 'Courier New', Courier, monospace; /* Example font */
-    font-size: 1em; /* Adjust size as needed */
-    color: #333; /* Adjust color as needed */
-    margin: auto;
+    font-size: 25px;
+    color:aqua;
     text-align: center;
 
 }
 
-#rollTable {
-    margin: 5%;
+body > header > div > h1 {
+    color: aqua;
+    font-size: 40px;
+    margin-top:5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+
+body > header > div > h2 {
+    color: aqua;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+body > section.diceborder > p.diceinfo {
+    color: aqua;
+    font-size: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.numberDice {
+    color:aqua;
+}
+
+
+.table {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: black;
+    color: aqua;
+    
 }
 
 div.modal-header {

@@ -10,23 +10,22 @@
 </head>
 
 <Header>
-    <section class="border border-3 rounded">
-        <div class="position-absolute top-50 start-50 translate-middle"></div>
-        <div class="text-white container bg-danger border-rounded bg-gradient border border-dark rounded border-3">
-            <h1 class="text-center">Random Dice Roll Generator</h1>
-            <h2 class="text-center small">This tool can roll up to 4 dice. You can choose between many different types
-                of dice. Enjoy!</h2>
-        </div>
+    <div class="headerContainer">
+        <h1 class="title">Random Dice Roll Generator</h1>
+        <h2 class="title">This tool can roll up to 4 different sized dice at a time. Use the dropdown menus to choose
+            your setup. Then click the roll button to see your results. To start over, press the reset button. Enjoy!!
+        </h2>
+    </div>
     </section>
 </Header>
 
 <body>
-    <section class="container border border-3 border-dark rounded" id="diceborder">
-        <p class="fw-bold text-center">Dice Info!</p>
+    <section class="diceborder">
+        <p class="diceinfo">Rolling Board</p>
         <div class="border-rounded d-flex justify-content-between flex-wrap">
             <div class="d-flex justify-content-center align-items-center w-100">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" id="dicebutton">
                         Number of Dice</button>
                     <ul class="dropdown-menu" id="numberOfDice" aria-labelledby="dropdownMenuButton">
                         <li class="dropdown-item">1</li>
@@ -34,7 +33,7 @@
                         <li class="dropdown-item">3</li>
                         <li class="dropdown-item">4</li>
                     </ul>
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" id="dicebutton">
                         Type of Dice
                     </button>
                     <ul class="dropdown-menu" id="typeOfDice" aria-labelledby="dropdownMenuButton">
@@ -60,31 +59,26 @@
                 <div class="row">
                     <div class="col text-center m-3">
                         <p id="typeOfDiceInfo"></p>
-                        </diu>
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-        </br>
-        <p className="currentResults" class="fw-bold text-center">Current Results</p>
+
+    
+        <p class="currentResult">Current Results</p>
         <ul class="mx-3-3-5 d-flex flex-wrap p-lg-5 list-group list-group-horizontal" id="currentResults"></ul>
 
 
     </section>
-    </section>
     <section class="text-center">
-        <div class="btn-group">
-            <button class="btn btn-outline-secondary" id="rollButton">
+        <div class="btn-group " role="group">
+            <button class="btn btn-outline-primary" id="rollButton">
                 Roll!
-
             </button>
-            <button class="btn btn-outline-secondary" id="resetButton">
+            <button class="btn btn-outline-primary" id="resetButton">
                 Reset!
             </button>
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
                 data-bs-target="#exampleModal">
                 Get Dice Stats!
             </button>
