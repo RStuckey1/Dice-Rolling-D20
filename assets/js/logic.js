@@ -118,14 +118,24 @@ const displayAverages = function (type) {
     console.log(currentStats[type])
 }
 const getCurrentResults = function () {
-    const results = JSON.parse(localStorage.getItem("currentResults")) || []
-    results.forEach(function (result) {
-        const newResultEl = document.createElement('p')
-        newResultEl.textContent = '  ' + result + '|'
-        document.getElementById('currentResults').appendChild(newResultEl)
+    const results = JSON.parse(localStorage.getItem("currentResults")) || [];
+    const currentResultsEl = document.getElementById('currentResults');
+    currentResultsEl.innerHTML = ''; // Clear previous results
 
+    results.forEach(function (result, idx) {
+        const newResultEl = document.createElement('li');
+        newResultEl.className = 'list-group-item';
+        newResultEl.textContent = result;
+        currentResultsEl.appendChild(newResultEl);
+
+        // Add separator if not the last result
+        if (idx < results.length - 1) {
+            const sep = document.createElement('span');
+            sep.className = 'roll-separator';
+            sep.textContent = '|';
+            currentResultsEl.appendChild(sep);
+        }
     });
-
 }
 
 const updateModalContent = function () {
@@ -229,3 +239,27 @@ const resetStats = function () {
 
 // Attach the reset function to the reset button's click event
 document.getElementById('resetStatsButton').addEventListener('click', resetStats);
+
+function renderCurrentResults(groups) {
+    const currentResultsEl = document.getElementById('currentResults');
+    currentResultsEl.innerHTML = '';
+
+    groups.forEach((group, idx) => {
+        // Create a list item for the group
+        const li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.textContent = group.join(', ');
+        currentResultsEl.appendChild(li);
+
+        // Add separator if not the last group
+        if (idx < groups.length - 1) {
+            const sep = document.createElement('span');
+            sep.className = 'roll-separator';
+            sep.textContent = '|';
+            currentResultsEl.appendChild(sep);
+        }
+    });
+}
+
+// Example usage:
+// renderCurrentResults([[3, 15, 7], [12, 4], [20]]);
