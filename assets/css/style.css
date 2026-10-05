@@ -154,14 +154,18 @@ body > section.diceborder > p.diceinfo {
 }
 
 
+
 .table {
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
     background-color: black;
-    color: aqua;
-    
+    color: aqua;    
 }
+
+
+
+
 
 div.modal-header {
     border:hidden;
@@ -248,4 +252,32 @@ div.modal-footer {
 .dice-info-container div {
     flex: 1;
     text-align: center;
+}
+
+.buttonClose {
+    border: 2px solid aqua;
+    background-color: black;
+    color: aqua;
+}
+
+.buttonReset {
+    border: 2px solid aqua;
+    background-color: black;
+    color: aqua;
+}
+
+
+.modal-content {
+    border: 2px solid aqua;
+    background-color: black;
+
+}
+
+.hex {
+    border: 2px solid aqua;
+}
+
+.content {
+    color: aqua;
+
 }

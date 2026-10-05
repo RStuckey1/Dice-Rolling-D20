@@ -92,7 +92,7 @@ const rollDice = function (number, sides, type) {
     const currentStats = JSON.parse(localStorage.getItem('stats')) || stats
 
     while (timesRolled < number) {
-        let sideSelected = Math.floor(Math.random() * sides.length)
+        let sideSelected = sides[Math.floor(Math.random() * sides.length)]
         currentStats[type].results += sideSelected
         currentResults.push(sideSelected)
         localStorage.setItem('currentResults', JSON.stringify(currentResults))
